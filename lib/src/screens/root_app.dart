@@ -1,7 +1,12 @@
 import 'package:entregas_15min/src/json/constant.dart';
+import 'package:entregas_15min/src/screens/account.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
+import 'cart.dart';
+import 'home.dart';
+import 'more.dart';
+import 'store.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({Key? key}) : super(key: key);
@@ -21,36 +26,11 @@ class _RootAppState extends State<RootApp> {
       body: IndexedStack(
         index: activeTab,
         children: const [
-          Center(
-            child: Text(
-              "Home",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Center(
-            child: Text(
-              "Loja",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Center(
-            child: Text(
-              "Contas",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Center(
-            child: Text(
-              "Carrinho",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
-          Center(
-            child: Text(
-              "Outros",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-          ),
+          Home(),
+          Store(),
+          Account(),
+          Cart(),
+          More(),
         ],
       ),
       bottomNavigationBar: getFooter(),
@@ -92,7 +72,7 @@ class _RootAppState extends State<RootApp> {
           backgroundColor: white,
           centerTitle: true,
           title: const Text(
-            "OUTROS",
+            "MAIS",
             style: TextStyle(color: black),
           ),
         );
