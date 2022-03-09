@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
 import 'cart.dart';
-import 'home.dart';
+import 'home/home.dart';
 import 'more.dart';
 import 'store.dart';
 
