@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../json/constant.dart';
 import '../../../theme/colors.dart';
 
-class Recently extends StatelessWidget {
-  const Recently({Key? key}) : super(key: key);
+class CustomHorizontalScroll extends StatelessWidget {
+  final List list;
+  const CustomHorizontalScroll({ Key? key, required this.list }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class Recently extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(
-          recently.length,
+          list.length,
           (index) {
             return Padding(
               padding: const EdgeInsets.only(left: 10),
@@ -25,7 +25,7 @@ class Recently extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image:
-                            NetworkImage(recently[index]["imgUrl"] as String),
+                            NetworkImage(list[index]["imgUrl"] as String),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(5),
@@ -38,7 +38,7 @@ class Recently extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          recently[index]["title"] as String,
+                          list[index]["title"] as String,
                           style: const TextStyle(
                             color: black,
                             fontWeight: FontWeight.bold,
@@ -48,7 +48,7 @@ class Recently extends StatelessWidget {
                         ),
                         // const SizedBox(height: 5,),
                         Text(
-                          " R\$ ${recently[index]["price"]} ",
+                          " R\$ ${list[index]["price"]} ",
                           style: const TextStyle(
                             color: grey,
                             fontWeight: FontWeight.bold,

@@ -1,12 +1,11 @@
+import 'package:entregas_15min/src/screens/home/widgets/custom_horizontal_scroll.dart';
 import 'package:entregas_15min/src/widgets/custom_carousel.dart';
 import 'package:flutter/material.dart';
 
 import '../../json/constant.dart';
-import '../../theme/colors.dart';
 import 'widgets/categories.dart';
+import 'widgets/custom_line.dart';
 import 'widgets/home_image.dart';
-import 'widgets/recently.dart';
-import 'widgets/recommends.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -24,117 +23,32 @@ class _HomeState extends State<Home> {
   }
 
   Widget getBody() {
-    // Size size = MediaQuery.of(context).size;
     return ListView(
       padding: EdgeInsets.zero,
-      children: [
+      children: const [
         // HOME IMAGE
-        const HomeImage(),
-        const SizedBox(height: 10),
-        Padding(
-          padding: const EdgeInsets.only(left: 15, right: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "Categorias",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "Todas",
-                    style: TextStyle(
-                        color: grey, fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.arrow_forward_ios_outlined,
-                        size: 18, color: grey),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 10),
+        HomeImage(),
+        SizedBox(height: 10),
         // CATEGORIES
-        const Categories(),
-        const SizedBox(
-          height: 30,
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 15, right: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "Recomendados para você",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "Todas",
-                    style: TextStyle(
-                        color: grey, fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.arrow_forward_ios_outlined,
-                        size: 18, color: grey),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 10),
+        CustomLine(text: "Categorias"),
+        SizedBox(height: 10),
+        Categories(),
+        SizedBox(height: 10),
         // RECOMMENDS
-        const Recommends(),
-        const SizedBox(height: 30),
+        CustomLine(text: "Recomendados para você"),
+
+        SizedBox(height: 10),
+        CustomHorizontalScroll(list: recommends),
+
+        SizedBox(height: 10),
         // CUSTOM SLIDER
-        const CustomeCarouselHomePage(items: slider),
-        const SizedBox(height: 30),
-        Padding(
-          padding: const EdgeInsets.only(left: 15, right: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                "Vistos recentemente",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Row(
-                children: [
-                  const Text(
-                    "Todos",
-                    style: TextStyle(
-                        color: grey, fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.arrow_forward_ios_outlined,
-                        size: 18, color: grey),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 30),
-        // RECENTLY
-        const Recently(),
-        const SizedBox(height: 30),
+        CustomeCarouselHomePage(items: slider),
+        SizedBox(height: 10),
+        // Vistos recentemente, Todos
+        CustomLine(text: "Vistos recentemente"),
+        SizedBox(height: 10),
+        CustomHorizontalScroll(list: recently),
+        SizedBox(height: 10),
       ],
     );
   }
