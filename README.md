@@ -1,4 +1,4 @@
-# Simple Food App
+<!-- # Simple Food App
 
 ![Licença](https://img.shields.io/badge/license-MIT-brightgreen)
 
@@ -60,9 +60,9 @@ Since Flutter is installed and configured (test this with the `flutter doctor` c
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/rafaelfl/food_app
+$ git clone https://github.com/ivictoruan/entregas_15min
 # Enter in the project folder in terminal/cmd
-$ cd food_app
+$ cd entregas_15min
 ```
 
 In order to run the app, you also need to start a fake REST API server which will provide the data for the app menu. We suggest to use the `json-server`, Node.js package. In order to install this server, you will need Node.js installed in your system (it can be downloaded [here](https://nodejs.org/en/)).
@@ -104,19 +104,19 @@ $ flutter run --dart-define=endpointDishes=SOME_VALUE1 \
 - [Flutter](https://flutter.dev/)
 - [Provider](https://pub.dev/packages/provider)
 - [Dio](https://pub.dev/packages/dio)
-- [Node.js](https://nodejs.org/en/)
+- [Django](https://www.djangoproject.com/)
 - [json-server](https://github.com/typicode/json-server)
 
 ---
 
 ## 🤷‍♂️🙄 Author
 
-<a href="https://github.com/rafaelfl/">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/31193433?v=4" width="100px;" alt=""/>
+<a href="https://github.com/ivictoruan">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/50781733?s=400&u=0db2d44aac1dae18640d5c00e8e0cf8775d8ea64&v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Visite meu canal no youtube, Ph.D.</b></sub></a>
 
 
 Developed with 🥵 by Victor Ruan Diniz Pereira
 
-[![Linkedin Badge](https://img.shields.io/badge/-Rafael%20Fernandes%20Lopes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafael-fernandes-lopes/)](https://www.linkedin.com/in/rafael-fernandes-lopes/)
+[![Linkedin Badge](https://img.shields.io/badge/-Rafael%20Fernandes%20Lopes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafael-fernandes-lopes/)](https://www.linkedin.com/in/rafael-fernandes-lopes/) -->
