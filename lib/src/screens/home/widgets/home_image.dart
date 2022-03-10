@@ -37,7 +37,7 @@ class HomeImage extends StatelessWidget {
                 onPressed: () {},
               ),
               // const SizedBox(width: 10),
-              IconButton(
+              IconButton( // ao clicar, abrir o appbar com o search
                 icon: const Icon(
                   Icons.search_outlined,
                   color: white,
@@ -48,34 +48,39 @@ class HomeImage extends StatelessWidget {
             ],
           ),
         ),
-        // text with icon button
+        // TEXT + ICON BUTTON
         Positioned(
           bottom: 20,
           child: Padding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 30),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
                   "Coleção de Verão",
                   style: TextStyle(
-                      color: white, fontSize: 25, fontWeight: FontWeight.bold),
+                      color: white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.8),
                 ),
-                Row(
-                  children: [
-                    const Text(
-                      "DESCUBRA",
-                      style: TextStyle(
-                          color: white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.arrow_forward_ios,
-                          color: white, size: 18),
-                      onPressed: () {},
-                    ),
-                  ],
+                const SizedBox(height: 5),
+                InkWell(
+                  onTap: () {},
+                  child: Row(
+                    children: const [
+                      Text(
+                        "DESCUBRA",
+                        style: TextStyle(
+                            color: white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 0.8),
+                      ),
+                      SizedBox(width: 5),
+                      Icon(Icons.arrow_forward_ios, color: white, size: 18),
+                    ],
+                  ),
                 ),
               ],
             ),

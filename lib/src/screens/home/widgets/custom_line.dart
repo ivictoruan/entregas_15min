@@ -20,19 +20,23 @@ class CustomLine extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Row(
-            children: [
-              const Text(
-                "Todos",
-                style: TextStyle(
-                    color: grey, fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              IconButton(
-                icon: const Icon(Icons.arrow_forward_ios_outlined,
-                    size: 18, color: grey),
-                onPressed: () {},
-              ),
-            ],
+          InkWell(
+            onTap: () {},
+            borderRadius: BorderRadius.circular(5),
+            child: Row(
+              children: const [
+                 Text(
+                  "Todos",
+                  style: TextStyle(
+                      color: grey, fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                Icon(
+                  Icons.arrow_forward_ios_outlined,
+                      size: 18, color: grey),
+                  // onPressed: () {},
+                // ),
+              ],
+            ),            
           ),
         ],
       ),

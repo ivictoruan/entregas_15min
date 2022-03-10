@@ -12,7 +12,10 @@ class Entregas15minApp extends StatelessWidget {
       title: "Entregas15min",
       home: const RootApp(),
       theme: ThemeData(
-        primaryColor: const Color(0xFFFA4A0C),
+        // primaryColor: Colors.grey,
+        colorScheme: ThemeData().colorScheme.copyWith(
+              secondary: Colors.grey,
+            ),
       ),
     );
   }
