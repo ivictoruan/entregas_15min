@@ -1,4 +1,4 @@
-# Simple Food App
+# Entregas em minutos 🙅🏽‍♂️
 
 ![Licença](https://img.shields.io/badge/license-MIT-brightgreen)
 
