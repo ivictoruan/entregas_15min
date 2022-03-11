@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/cart_product.dart';
+
 class Cart extends StatefulWidget {
   const Cart({Key? key}) : super(key: key);
 
@@ -11,12 +13,16 @@ class _CartState extends State<Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text(
-          "Carrinho",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-      ),
+      body: getBody(),
+    );
+  }
+  Widget getBody() {
+    return ListView(
+      children: const [
+        // List.generate(length, (index) => null)
+        CartProduct(),
+
+      ],
     );
   }
 }

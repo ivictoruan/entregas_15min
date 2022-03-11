@@ -3,7 +3,7 @@ import 'package:entregas_15min/src/screens/account/account.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
-import 'cart.dart';
+import 'cart/cart.dart';
 import 'home/home.dart';
 import 'more.dart';
 import 'store/store.dart';
