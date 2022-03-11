@@ -336,13 +336,13 @@ List itemsTab = [
 ];
 
 List accountList = [
-  "Account Details",
-  "Loyalty card & offers",
-  "Notifications",
-  "Delivery Information",
-  "Payment Information",
-  "Language",
-  "Privacy Settings"
+  "Detalhes da Conta",
+  "Cartão fidelidade & ofertas",
+  "Notificações",
+  "Informações de Entrega",
+  "Informações de Pagamento",
+  "Idioma",
+  "Configurações de Privacidade"
 ];
 
 List storeList = [

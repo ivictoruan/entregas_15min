@@ -2,7 +2,7 @@ import 'package:entregas_15min/src/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../json/constant.dart';
+import '../../json/constant.dart';
 
 class Store extends StatefulWidget {
   const Store({Key? key}) : super(key: key);
@@ -60,7 +60,7 @@ class _StoreState extends State<Store> {
                   // width: MediaQuery.of(context).size.width * 0.8,
                   child: TextField(
                     cursorColor: primary,
-                    decoration: InputDecoration(                      
+                    decoration: InputDecoration(
                       hintText: "Buscar",
                       hintStyle: const TextStyle(fontSize: 16),
                       prefixIcon: Icon(
@@ -95,16 +95,16 @@ class _StoreState extends State<Store> {
             ],
           ),
           const SizedBox(height: 40),
-          Divider(
-            color: grey.withOpacity(0.4),
-          ),
+          Divider(color: grey.withOpacity(0.4)),
           const SizedBox(height: 30),
+          // TEXT
           Container(
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: const Text("Todas as lojas",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
           ),
           const SizedBox(height: 20),
+          // STORE LIST
           Column(
             children: List.generate(
               storeList.length,

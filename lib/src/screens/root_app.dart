@@ -1,12 +1,12 @@
 import 'package:entregas_15min/src/json/constant.dart';
-import 'package:entregas_15min/src/screens/account.dart';
+import 'package:entregas_15min/src/screens/account/account.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/colors.dart';
 import 'cart.dart';
 import 'home/home.dart';
 import 'more.dart';
-import 'store.dart';
+import 'store/store.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({Key? key}) : super(key: key);
@@ -53,7 +53,7 @@ class _RootAppState extends State<RootApp> {
           centerTitle: true,
           title: const Text(
             "CONTA",
-            style: TextStyle(color: black),
+            style: TextStyle(color: black, letterSpacing: 0.8),
           ),
         );
       case 3:
@@ -62,8 +62,8 @@ class _RootAppState extends State<RootApp> {
           backgroundColor: white,
           centerTitle: true,
           title: const Text(
-            "COMPRAS",
-            style: TextStyle(color: black),
+            "CARRINHO",
+            style: TextStyle(color: black, letterSpacing: 0.8),
           ),
         );
       case 4:
@@ -73,7 +73,7 @@ class _RootAppState extends State<RootApp> {
           centerTitle: true,
           title: const Text(
             "MAIS",
-            style: TextStyle(color: black),
+            style: TextStyle(color: black, letterSpacing: 0.8),
           ),
         );
     }
