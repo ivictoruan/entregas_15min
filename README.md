@@ -36,16 +36,16 @@ The application has some component gaps to be filled by the students (or anyone 
     <td>Login screen</td>
   </tr>
   <tr>
-    <td><img src="screenshots/screenshot1.png" width=250></td>
-    <td><img src="screenshots/screenshot2.png" width=250></td>
+    <td><img src="screenshots/screenshot_1.png" width=250></td>
+    <td><img src="screenshots/screenshot_2.png" width=250></td>
   </tr>
   <tr>
     <td>Store screen</td>
     <td>Others screens</td>
   </tr>
   <tr>
-    <td><img src="screenshots/screenshot3.png" width=250></td>
-    <td><img src="screenshots/screenshot4.png" width=250></td>
+    <td><img src="screenshots/screenshot_3.png" width=250></td>
+    <td><img src="screenshots/screenshot_4.png" width=250></td>
   </tr>
  </table>
 
