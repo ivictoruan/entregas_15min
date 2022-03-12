@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CartProduct extends StatefulWidget {
-  const CartProduct({Key? key}) : super(key: key);
+  // final List product;
+  const CartProduct({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<CartProduct> createState() => _CartProductState();
@@ -12,32 +15,92 @@ class CartProduct extends StatefulWidget {
 class _CartProductState extends State<CartProduct> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Positioned(
-          left:5,
-          child: Icon(
-            FontAwesomeIcons.plus,
-            color: grey,
-            size: 15,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // IMAGE
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
+                child: Container(
+                  width: 150,
+                  height: 180,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: black,
+                    // image: DecorationImage(
+                    //   image: NetworkImage(
+                    //      "${widget.product["img"]}"
+                    //   ),
+                    //   fit: BoxFit.cover,
+                    // ),
+                  ),
+                ),
+              ),
+              // TEXT WITH CART INFORMATION
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "Nome do Produto",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20,
+                          letterSpacing: 0.8),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Ref 4546554465",
+                      style: TextStyle(
+                        color: grey,
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "S",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 20,
+                          letterSpacing: 0.8),
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: [
+                        const Text(
+                          "R\$ 40",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20,
+                              letterSpacing: 0.8),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(FontAwesomeIcons.minus,
+                              size: 12, color: black.withOpacity(0.5)),
+                        ),
+                        const Text(
+                          "1",
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(FontAwesomeIcons.plus,
+                              size: 12, color: black.withOpacity(0.5)),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 20), 
+            ],
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            width: 150,
-            height: 200,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5),
-              color: black,
-              // image: DecorationImage(
-              //   image: AssetImage('assets/images/product.png'),
-              //   fit: BoxFit.cover,
-              // ),
-            ),
-          ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

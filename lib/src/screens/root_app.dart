@@ -81,7 +81,7 @@ class _RootAppState extends State<RootApp> {
 
   Widget getFooter() {
     return Container(
-      height: 80,
+      height: MediaQuery.of(context).size.height * 0.08,
       decoration: BoxDecoration(
           color: white,
           border: Border(
@@ -89,7 +89,7 @@ class _RootAppState extends State<RootApp> {
             color: grey.withOpacity(0.4),
           ))),
       child: Padding(
-        padding: const EdgeInsets.only(left: 10, right: 10, top: 5),
+        padding: const EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: List.generate(itemsTab.length, (index) {

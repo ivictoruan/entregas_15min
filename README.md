@@ -4,9 +4,9 @@
 
 ## About
 
-<!-- <p align="center">
-Small educational project developed with the objective of presenting the concepts related to the development of mobile applications using Flutter for the course **Mobile Application Development** (2021.2) of the Computer Engineering Course - Federal University of Maranhão (UFMA)
-</p> -->
+<p align="center">
+Project developed with the objective of starting a business about fast delivery on São Luís.
+</p>
 
 
 ## Table of Contents
@@ -23,17 +23,20 @@ Small educational project developed with the objective of presenting the concept
 ---
 
 ## 💻 Project Description
-<!-- 
-The project consists of a simple food delivery developed during the classes of the course in order to help the students to understand how some concepts are implemented in a real world app using the [Flutter framework](https://flutter.dev/). Concepts like design principles, architecture of mobile applications, technologies (native, web, hybrid), lifecycle, UI rendering, componentization, navigation, state management and API access and consumption (as well as Dart and Flutter 😄) were some topics discussed in the course.
 
-The application has some component gaps to be filled by the students (or anyone with this code 😉). The design was based on the [Food delivery app Ui kit](https://www.figma.com/community/file/893381127703378146). -->
+The project consists of a store developed intending solving custumers problems around purchase fashion items like dresses, shirts, pants, among other clothing items. 
+
+The application has an API that is being developed together this project where I'll to make avalieble coming soon 🙃
+<!-- The project consists of a grocery store delivery developed intending solving custumers problems around purchase basic items like rice, beans, pasta, etc...
+
+The application has an API that is being developed together this project where I'll to make avalieble coming soon 🙃 -->
 
 ### Screenshots:
 
-<table>
+<table align="center">
   <tr>
-    <td>Start screen</td>
-    <td>Login screen</td>
+    <td>Start Screen</td>
+    <td>More about Home</td>
   </tr>
   <tr>
     <td><img src="screenshots/screenshot_1.png" width=250></td>
@@ -47,6 +50,15 @@ The application has some component gaps to be filled by the students (or anyone 
     <td><img src="screenshots/screenshot_3.png" width=250></td>
     <td><img src="screenshots/screenshot_4.png" width=250></td>
   </tr>
+   <tr>
+    <td>Account Screen</td>
+    <td>More about Account</td>
+  </tr>
+    <tr>
+    <td><img src="screenshots/screenshot_6.png" width=250></td>
+    <td><img src="screenshots/screenshot_7.png" width=250></td>
+  </tr>
+
  </table>
 
 ---
@@ -65,17 +77,6 @@ $ git clone https://github.com/ivictoruan/entregas_15min
 $ cd entregas_15min
 ```
 
-<!-- In order to run the app, you also need to start a fake REST API server which will provide the data for the app menu. We suggest to use the `json-server`, Node.js package. In order to install this server, you will need Node.js installed in your system (it can be downloaded [here](https://nodejs.org/en/)). -->
-
-<!-- ```bash
-# Install the json-server globally in your system
-$ npm install -g json-server
-# Run the server using the api.json file available
-# in the project. Run it in a separated terminal
-$ json-server --watch api.json
-``` -->
----
-
 ## 🚀 Installation
 
 After installing the Flutter framework and running the fake API server, you can install the dependencies and run the project on a device or simulator/emulator.
@@ -87,14 +88,6 @@ $ flutter pub get
 # with an opened simulator/emulator or even with
 # a deviced plugged
 $ flutter run
-# By default, the application access the API in the
-# address http://localhost:3000/dishes and the
-# default email/password are email@email.com /
-# 123456. To change this, you can define those params
-# using the following optional parameters
-$ flutter run --dart-define=endpointDishes=SOME_VALUE1 \
-   --dart-define=defaultEmail=SOME_VALUE2 \
-   --dart-define=defaultPassword=SOME_VALUE3
 ```
 
 ---
@@ -103,7 +96,7 @@ $ flutter run --dart-define=endpointDishes=SOME_VALUE1 \
 
 - [Flutter](https://flutter.dev/)
 - [Provider](https://pub.dev/packages/provider)
-- [Dio](https://pub.dev/packages/dio)
+<!-- - [Dio](https://pub.dev/packages/dio) -->
 - [DjangoRestFramework](https://www.django-rest-framework.org/)
 
 
@@ -112,7 +105,7 @@ $ flutter run --dart-define=endpointDishes=SOME_VALUE1 \
 ## 🤷‍♂️🙄 Author
 
 <a 
-href="https://github.com/ivictoruan">
+href="https://www.youtube.com/channel/UCYGTHmRH98FPXdnACHAmTjg">
   <sub>
     <b>
     👀 Visite meu canal no Youtube.
@@ -122,9 +115,9 @@ href="https://github.com/ivictoruan">
 
 <a href=" https://www.youtube.com/channel/UCYGTHmRH98FPXdnACHAmTjg">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/50781733?s=400&u=0db2d44aac1dae18640d5c00e8e0cf8775d8ea64&v=4" width="100px;" alt=""/>
- <br />
- <sub><b>Acesse aqui.</b></sub></a>
 
 Developed with 🥵 by Victor Ruan Diniz Pereira
+<br>
+Science and Techology student precipitated in Computer Engineering from the Federal University of Maranhão 
 
 [![Linkedin Badge](https://img.shields.io/badge/-Victor%20Ruan%20Diniz%20Pereira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ivictoruan/)](https://www.linkedin.com/in/ivictoruan/)
