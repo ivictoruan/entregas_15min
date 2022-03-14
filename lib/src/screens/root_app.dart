@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../theme/colors.dart';
 import 'cart/cart.dart';
 import 'home/home.dart';
-import 'more.dart';
+import 'more/more.dart';
 import 'store/store.dart';
 
 class RootApp extends StatefulWidget {

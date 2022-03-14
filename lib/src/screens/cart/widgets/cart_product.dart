@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CartProduct extends StatefulWidget {
-  // final List product;
+  final List cartList;
+  final int index;
   const CartProduct({
     Key? key,
+    required this.cartList,
+    required this.index,
   }) : super(key: key);
 
   @override
@@ -13,10 +16,18 @@ class CartProduct extends StatefulWidget {
 }
 
 class _CartProductState extends State<CartProduct> {
+  void addItem() {
+    setState(() {});
+  }
+
+  void removeItem() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
+      padding: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,13 +41,13 @@ class _CartProductState extends State<CartProduct> {
                   height: 180,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: black,
-                    // image: DecorationImage(
-                    //   image: NetworkImage(
-                    //      "${widget.product["img"]}"
-                    //   ),
-                    //   fit: BoxFit.cover,
-                    // ),
+                    // color: black,
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        widget.cartList[widget.index]['img'],
+                      ),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -46,24 +57,24 @@ class _CartProductState extends State<CartProduct> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Nome do Produto",
-                      style: TextStyle(
+                    Text(
+                      widget.cartList[widget.index]['name'],
+                      style: const TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 20,
                           letterSpacing: 0.8),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
-                      "Ref 4546554465",
-                      style: TextStyle(
+                    Text(
+                      widget.cartList[widget.index]['ref'],
+                      style: const TextStyle(
                         color: grey,
                       ),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
-                      "S",
-                      style: TextStyle(
+                    Text(
+                      widget.cartList[widget.index]['size'],
+                      style: const TextStyle(
                           fontWeight: FontWeight.w400,
                           fontSize: 20,
                           letterSpacing: 0.8),
@@ -71,15 +82,15 @@ class _CartProductState extends State<CartProduct> {
                     const SizedBox(height: 20),
                     Row(
                       children: [
-                        const Text(
-                          "R\$ 40",
-                          style: TextStyle(
+                        Text(
+                          widget.cartList[widget.index]['price'],
+                          style: const TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 20,
                               letterSpacing: 0.8),
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: addItem,
                           icon: Icon(FontAwesomeIcons.minus,
                               size: 12, color: black.withOpacity(0.5)),
                         ),
@@ -87,7 +98,7 @@ class _CartProductState extends State<CartProduct> {
                           "1",
                         ),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: removeItem,
                           icon: Icon(FontAwesomeIcons.plus,
                               size: 12, color: black.withOpacity(0.5)),
                         )
@@ -96,7 +107,7 @@ class _CartProductState extends State<CartProduct> {
                   ],
                 ),
               ),
-              const SizedBox(height: 20), 
+              const SizedBox(height: 20),
             ],
           ),
         ],
