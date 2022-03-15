@@ -20,13 +20,13 @@ class SmallActionButton extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 0.4,
         height: MediaQuery.of(context).size.height * 0.08,
         decoration: BoxDecoration(
-          color: black,
-          borderRadius: BorderRadius.circular(20),
-          // border: Border.all(
-          //   // borda preta!
-          //   color: black,
-          //   width: 1,
-          // ),
+          color: color ?? black,
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(
+            // borda preta!
+            color: color == white ? black : white,
+            width: 1.5,
+          ),
           boxShadow: [
             BoxShadow(
               color: accent.withOpacity(0.6), // psicodelia
@@ -40,9 +40,10 @@ class SmallActionButton extends StatelessWidget {
           child: Center(
             child: Text(
               text,
-              style: const TextStyle(
-                color: white,
+              style: TextStyle(
+                color: color == white ? black : white,
                 fontWeight: FontWeight.bold,
+                fontSize: 15,
               ),
             ),
           ),

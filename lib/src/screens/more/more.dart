@@ -25,7 +25,8 @@ class _MoreState extends State<More> {
         Row(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.only(
+                  left: 25, right: 25, top: 15, bottom: 10),
               child: Container(
                 width: 100,
                 height: 100,
@@ -68,30 +69,28 @@ class _MoreState extends State<More> {
           thickness: 1,
           color: black.withOpacity(0.1),
         ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: List.generate(
-            menusMore.length,
-            (index) {
-              return Padding(
-                padding: const EdgeInsets.only(left: 30, top: 11, bottom: 11),
-                child: Text(
-                  menusMore[index],
-                  style: const TextStyle(
-                    fontSize: 26,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.8,
+        Padding(
+          padding: const EdgeInsets.only(left: 25, right: 25),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: List.generate(menusMore.length, (index) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 26),
+                  child: Text(
+                    menusMore[index],
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 23),
                   ),
-                ),
-              );
-            },
-          ),
+                );
+              })),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            SmallActionButton(text: "Settings", onTap: (){} ), // botão preto
-            SmallActionButton(text: "Sign Out", onTap: (){}, color: white ), // botão branco borda preta
+            SmallActionButton(text: "Settings", onTap: () {}), // botão preto
+            SmallActionButton(
+                text: "Sign Out",
+                onTap: () {},
+                color: white), // botão branco borda preta
           ],
         ),
       ],

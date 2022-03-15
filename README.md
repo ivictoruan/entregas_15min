@@ -35,28 +35,28 @@ The application has an API that is being developed together this project where I
 
 <table align="center">
   <tr>
-    <td>Start Screen</td>
-    <td>More about Home</td>
+    <td>Home Screen</td>
+    <td> + Home</td>
   </tr>
   <tr>
     <td><img src="screenshots/screenshot_1.png" width=250></td>
-    <td><img src="screenshots/screenshot_2.png" width=250></td>
-  </tr>
-  <tr>
-    <td>Store screen</td>
-    <td>Others screens</td>
-  </tr>
-  <tr>
     <td><img src="screenshots/screenshot_3.png" width=250></td>
+  </tr>
+  <tr>
+    <td>Store Screen</td>
+    <td> + Store</td>
+  </tr>
+  <tr>
     <td><img src="screenshots/screenshot_4.png" width=250></td>
+    <td><img src="screenshots/screenshot_5.png" width=250></td>
   </tr>
    <tr>
     <td>Account Screen</td>
-    <td>More about Account</td>
+    <td>More Screen</td>
   </tr>
     <tr>
     <td><img src="screenshots/screenshot_6.png" width=250></td>
-    <td><img src="screenshots/screenshot_7.png" width=250></td>
+    <td><img src="screenshots/screenshot_8.png" width=250></td>
   </tr>
 
  </table>
